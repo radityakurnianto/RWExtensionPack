@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 @objc public class AppInfo: NSObject {
-    @objc static let appName: String = {
+    @objc public static let appName: String = {
         guard let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String else { return "" }
         return name
     }()
     
-    @objc static let osVersion: String = {
+    @objc public static let osVersion: String = {
         return "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }()
     
@@ -23,18 +23,18 @@ import UIKit
         return version
     }()
     
-    @objc static let appBuildNumber: String = {
+    @objc public static let appBuildNumber: String = {
         guard let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else { return "" }
         return buildNumber
     }()
     
-    @objc static let copyright: String = {
+    @objc public static let copyright: String = {
         let components = Calendar.current.component(Calendar.Component.year, from: Date())
         
         return "Copyright © \(Int(components)) \(AppInfo.appName)"
     }()
     
-    @objc static let deviceName: String = {
+    @objc public static let deviceName: String = {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
