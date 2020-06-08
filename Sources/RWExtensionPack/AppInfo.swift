@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-@objc class AppInfo: NSObject {
+@objc public class AppInfo: NSObject {
     @objc static let appName: String = {
         guard let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String else { return "" }
         return name
@@ -18,7 +18,7 @@ import UIKit
         return "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }()
     
-    @objc static let appVersionNumber: String = {
+    @objc public static let appVersionNumber: String = {
         guard let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return "" }
         return version
     }()
