@@ -60,7 +60,7 @@ extension MKMapView {
         return span
     }
 
-    func zoom(toCenterCoordinate centerCoordinate:CLLocationCoordinate2D, zoomLevel: UInt) {
+    public func zoom(toCenterCoordinate centerCoordinate:CLLocationCoordinate2D, zoomLevel: UInt) {
         let zoomLevel = min(zoomLevel, 20)
         let span = self.coordinateSpan(withMapView: self, centerCoordinate: centerCoordinate, zoomLevel: zoomLevel)
         let region = MKCoordinateRegion(center: centerCoordinate, span: span)
