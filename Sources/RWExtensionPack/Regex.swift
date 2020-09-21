@@ -11,7 +11,6 @@ public class Regex: NSObject {
     public static func check(keyword: String, pattern: String) -> Bool {
         do {
             let searchRange = NSRange(location: 0, length: keyword.count)
-            var error: Error = nil
             
             let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
             let match = regex.firstMatch(in: keyword, options: [], range: searchRange)
