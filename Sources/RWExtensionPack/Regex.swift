@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Regex {
-    static func check(keyword: String, against pattern: String) -> Bool {
+public class Regex {
+    static public func check(keyword: String, against pattern: String) -> Bool {
         let searchRange = NSRange(location: 0, length: keyword.count)
         var error: Error = nil
         
