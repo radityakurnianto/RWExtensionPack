@@ -8,7 +8,7 @@
 import Foundation
 
 public class Regex: NSObject {
-    static public func check(keyword: String, against pattern: String) -> Bool {
+    public static func check(keyword: String, against pattern: String) -> Bool {
         let searchRange = NSRange(location: 0, length: keyword.count)
         var error: Error = nil
         
