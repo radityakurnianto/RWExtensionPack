@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Photos
 
 class ImageSaver {
     static func checkAuthorization(_ completion: @escaping(Bool)->Void) -> Void {
