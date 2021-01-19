@@ -10,6 +10,7 @@ import SDWebImage
 
 extension UIImageView {
     @objc public func set(image url: String, placeholder: UIImage?) -> Void {
+        self.sd_imageIndicator = SDWebImageActivityIndicator.gray
         self.set(image: url, placholder: placeholder, completion: nil)
     }
     
