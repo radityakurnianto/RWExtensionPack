@@ -4,6 +4,7 @@
 //
 //  Created by Raditya Kurnianto on 5/26/20.
 //
+#if canImport(WebKit)
 import WebKit
 
 public extension WKWebView {
@@ -78,3 +79,4 @@ public extension WKWebView {
         }
     }
 }
+#endif
